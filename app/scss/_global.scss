@@ -28,3 +28,19 @@ a {
    line-height: 26px;
    @extend %quicksand-500;
 }
+
+.title {
+   font-size: 48px;
+   line-height: 65px;
+   margin-bottom: 10px;
+   color: $title;
+   @extend %roboto-700;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.text {
+   text-align: center;
+   margin: 0 auto 55px;
+   max-width: 530px;
+}
