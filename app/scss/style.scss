@@ -595,11 +595,88 @@
 
 .partners {
    height: 170px;
-   padding: 110px 0 50px;
+   padding-top: 75px;
    &__list {
       display: flex;
       justify-content: space-between;
       align-items: center
+   }
+}
+
+.blog {
+   padding: 50px 0 160px;
+   background-image: url('../images/blog-bg.svg');
+   background-repeat: no-repeat;
+   background-position: center center;
+   &__text {
+      max-width: 571px;
+   }
+   &__items {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__item {
+      max-width: 370px;
+      border: 1px solid #e8e8e8;
+      transition: all .3s;
+      &:hover {
+         border-color: transparent;
+         box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+         .blog__item-link {
+            color: $accent;
+         }
+         .blog__item-link::after {
+            background-image: url('../images/icons/arrow-accent.svg');
+         }
+      }
+   }
+   &__item-box {
+      padding: 30px;
+   }
+   &__item-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+   }
+   &__item-author,
+   &__item-date {
+      padding-left: 30px;
+      position: relative;
+   }
+   &__item-author::before,
+   &__item-date::before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 3px;
+   }
+   &__item-author::before {
+      background-image: url('../images/icons/user-gray.svg');
+   }
+   &__item-date::before {
+      background-image: url('../images/icons/clock.svg');
+   }
+   &__item-title {
+      color: $title;
+      font-size: 22px;
+      line-height: 32px;
+      margin-bottom: 20px;
+   }
+   &__item-link {
+      position: relative;
+      transition: all .3s;
+   }
+   &__item-link::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 8px;
+      background-image: url('../images/icons/arrow.svg');
+      background-repeat: no-repeat;
+      top: 7px;
+      right: -13px;
    }
 }
 
