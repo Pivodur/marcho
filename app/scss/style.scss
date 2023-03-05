@@ -805,6 +805,9 @@
       color: $accent;
       @extend %roboto-400;
    }
+   &__text {
+      margin-bottom: 20px;
+   }
 }
  
 
