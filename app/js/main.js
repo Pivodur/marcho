@@ -1,4 +1,17 @@
 $(function(){
+   $(".filter-price__input").ionRangeSlider({
+      type: "double",
+      prefix: $,
+      onStart: function (data) {
+         $(".filter__price-from").text(data.from);
+         $(".filter__price-to").text(data.to);
+      }, 
+      onChange: function (data) {
+         $(".filter__price-from").text(data.from);
+         $(".filter__price-to").text(data.to);
+     },
+
+   })
    $('.top-slider__inner').slick({
       dots: true,
       arrows: false,
