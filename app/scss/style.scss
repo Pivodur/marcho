@@ -845,6 +845,7 @@
    padding: 120px 0 116px;
    &__inner {
       display: flex;
+      justify-content: space-between;
    }
 }
 
@@ -1072,10 +1073,117 @@
    }
 }
 
+.shop-content {
+   max-width: 770px;
+   width: 100%;
+   &__filter {
+      width: 100%;
+      border: 1px solid #EBEBEB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+   }
+   &__filter-views {
+      display: flex;
+      align-items: center;
+   }
+   &__filter-btn {
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      line-height: 0;
+      margin-left: 14px;
+   }
+   &__filter-btn--active {
+      path {
+         fill: $accent;
+      }
+   }
+}
 
+.jq-selectbox__select {
+   height: 32px;
+   padding: 0 20px 0 0;
+   border: none;
+   border-bottom-color: none;
+   border-radius: 0;
+   background: transparent;
+   box-shadow: none;
+   @extend %quicksand-500;
+   font-size: 16px;
+   color: $default;
+   text-shadow: none;
+   margin-left: 40px;
+   &:hover {
+      background: none;
+   }
+}
 
+.shop-content__select-sort > .jq-selectbox__select {
+   width: 136px;
+}
 
+.shop-content__select-show > .jq-selectbox__select {
+   width: 76px;
+}
 
+.jq-selectbox__trigger {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 34px;
+   border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+   position: absolute;
+   background-image: url('../images/icons/angle_down.svg');
+   top: 14px;
+   right: 0px;
+   width: 10px;
+   height: 5px;
+   border: none;
+}
+
+.jq-selectbox__select-text {
+   text-align: right;
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+	border: none;
+}
+
+.jq-selectbox li {
+   &:hover {
+      background-color: #EBEBEB;
+      color: #231f20;
+   }
+}
+
+.jq-selectbox li.selected {
+   background-color: #EBEBEB;
+   color: #231f20;
+}
+
+.jq-selectbox__dropdown {
+   box-sizing: border-box;
+   width: 100%;
+   margin: 2px 0 0;
+   padding: 0;
+   // border: 1px solid #ccc;
+   border-radius: 0;
+   background: #fff;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+   font: 14px/18px Arial,sans-serif;
+}
+
+.jq-selectbox li {
+   min-height: 18px;
+   padding: 5px 10px 6px;
+   color: #231f20;
+}
 
 
 

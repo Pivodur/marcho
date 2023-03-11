@@ -1,4 +1,6 @@
 $(function(){
+   $(".shop-content__select").styler()
+
    $(".filter-price__input").ionRangeSlider({
       type: "double",
       prefix: $,
