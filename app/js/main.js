@@ -2,6 +2,8 @@ $(function(){
    $(".filter-price__input").ionRangeSlider({
       type: "double",
       prefix: $,
+      hide_from_to: true, 
+      hide_min_max: true,
       onStart: function (data) {
          $(".filter__price-from").text(data.from);
          $(".filter__price-to").text(data.to);
