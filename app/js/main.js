@@ -1,4 +1,20 @@
 $(function(){
+
+   $(".shop-content__filter-btn").on("click", function(){
+      $(".shop-content__filter-btn").removeClass("shop-content__filter-btn--active")
+      $(this).addClass("shop-content__filter-btn--active")
+   })
+
+   $(".button-list").on("click", function(){
+      $(".products-item").addClass("product-item--list")
+      $(".shop-content").addClass("shop-content--list")
+   })
+
+   $(".button-grid").on("click", function(){
+      $(".products-item").removeClass("product-item--list")
+      $(".shop-content").removeClass("shop-content--list")
+   })
+
    $(".shop-content__select").styler()
 
    $(".filter-price__input").ionRangeSlider({
