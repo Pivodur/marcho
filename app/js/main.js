@@ -1,5 +1,20 @@
 $(function(){
 
+   $(".product-slide__thumbs").slick({
+      asNavFor: '.product-slide__big',
+      draggable: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      vertical: true,
+      focusOnSelect: true,
+   })
+   $(".product-slide__big").slick({
+      asNavFor: '.product-slide__thumbs',
+      draggable: false,
+      arrows: false,
+      fade: true
+   })
+
    $(".shop-content__filter-btn").on("click", function(){
       $(".shop-content__filter-btn").removeClass("shop-content__filter-btn--active")
       $(this).addClass("shop-content__filter-btn--active")
@@ -15,7 +30,7 @@ $(function(){
       $(".shop-content").removeClass("shop-content--list")
    })
 
-   $(".shop-content__select").styler()
+   $(".shop-content__select, .product-filter__num").styler()
 
    $(".filter-price__input").ionRangeSlider({
       type: "double",
@@ -44,6 +59,7 @@ $(function(){
       normalFill: "#ccccce",
       ratedFill: "#ffc35b",
       readOnly: true,
+      
     });
     function getTimeRemaining(endtime) {
       const total = Date.parse(endtime) - Date.parse(new Date());
