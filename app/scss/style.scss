@@ -1563,6 +1563,246 @@
    background-color: $title;
 }
 
+.product-tabs {
+   padding-top: 115px;
+   &__top {
+      padding-bottom: 13px;
+      margin-bottom: 38px;
+      border-bottom: 1px solid #ECECEC;
+   }
+
+   &__top-item {
+      font-size: 22px;
+      line-height: 27px;
+      &:not(:last-child) {
+         margin-right: 58px;
+      }
+      &--active {
+         color: $title;
+         position: relative;
+         &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            bottom: -15px;
+            background-color: $accent;
+         }
+      }
+   }
+
+   &__content {
+      margin-bottom: 60px;
+   }
+
+   &__content-item {
+      display: none;
+      &--active {
+         display: block;
+      }
+   }
+}
+
+.comment {
+   display: flex;
+   &:not(:last-child) {
+      margin-bottom: 37px;
+   }
+
+   &__ava {
+      min-width: 71px;
+      height: 71px;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 24px;
+   }
+
+   &__content {
+   }
+
+   &__content-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 9px;
+   }
+
+   &__title {
+      color: $title;
+      @extend %roboto-400;
+      margin-right: 14px;
+   }
+
+   &__date {
+      padding-left: 15px;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         width: 1px;
+         height: 13px;
+         left: 0;
+         top: 7px;
+         background-color: $default;
+      }
+   }
+
+   &__stars {
+      margin-right: 0;
+      margin-left: auto;
+   }
+
+   &__text {
+      margin-bottom: 7px;
+   }
+
+   &__reply {
+      padding-left: 25px;
+      position: relative;
+      transition: color .3s;
+      &:hover {
+         color: darken($color: $default, $amount: 15)
+      }
+      &::before {
+         position: absolute;
+         content: '';
+         left: 0;
+         top: 4px;
+         width: 15px;
+         height: 13px;
+         background-image: url('../images/icons/reply.svg');
+      }
+   }
+}
+
+.comment-add {
+   margin-bottom: 60px;
+   &__title {
+      @extend %roboto-400;
+      font-size: 22px;
+      line-height: 27px;
+      color: $title;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 36px;
+      &::after {
+         position: absolute;
+         content: '';
+         width: 50px;
+         height: 2px;
+         background-color: $accent;
+         bottom: 0;
+         left: 0;
+      }
+   }
+}
+.comment-form {
+
+   &__rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+   }
+
+   &__rating-title {
+      color: $title;
+      margin-right: 55px;
+   }
+
+   &__label {
+      cursor: pointer;
+      &:not(:last-child) {
+         margin-right: 30px;
+      }
+   }
+
+   &__rating-input {
+      @extend %radio-hidden;
+      &:checked + .comment-form__radio {
+         path {
+            fill: #FFC35B;
+         }
+      }
+   }
+
+   &__radio {
+      display: flex;
+      align-items: center;
+      path {
+         fill: #CCCCCE;
+      }
+   }
+
+   &__input-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      column-gap: 30px
+   }
+
+   &__input {
+      flex-grow: 1;
+      height: 50px;
+      padding: 15px 20px;
+      outline: none;
+      border: 1px solid #ECECEC;
+      // width: 50%;
+   }
+
+   &__textarea {
+      width: 100%;
+      min-height: 224px;
+      resize: none;
+      margin-bottom: 40px;
+      padding: 16px 20px;
+      outline: none;
+      border: 1px solid #ECECEC;
+   }
+
+   &__btn {
+      @extend %btn;
+      letter-spacing: normal;
+      padding: 15px 36px;
+   }
+}
+
+.related {
+   padding: 47px 0 118px;
+   &__title {
+      margin-bottom: 47px;
+   }
+   &__inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+   }
+   .products-item__img-box {
+      height: auto;
+      margin-bottom: 17px;
+   }
+   .products-item__title {
+      padding: 5px 0;
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

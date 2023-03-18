@@ -1,5 +1,13 @@
 $(function(){
 
+   $(".product-tabs__top-item").on("click", function(e) {
+      e.preventDefault();
+      $(".product-tabs__top-item").removeClass("product-tabs__top-item--active");
+      $(this).addClass("product-tabs__top-item--active");
+      $(".product-tabs__content-item").removeClass("product-tabs__content-item--active");
+      $($(this).attr('href')).addClass("product-tabs__content-item--active")
+   })
+
    $(".product-slide__thumbs").slick({
       asNavFor: '.product-slide__big',
       draggable: false,
@@ -59,8 +67,8 @@ $(function(){
       normalFill: "#ccccce",
       ratedFill: "#ffc35b",
       readOnly: true,
-      
     });
+
     function getTimeRemaining(endtime) {
       const total = Date.parse(endtime) - Date.parse(new Date());
       const seconds = Math.floor((total / 1000) % 60);
