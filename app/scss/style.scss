@@ -739,31 +739,31 @@
    &__item-box {
       padding: 30px;
    }
-   &__item-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-   }
-   &__item-author,
-   &__item-date {
-      padding-left: 30px;
-      position: relative;
-   }
-   &__item-author::before,
-   &__item-date::before {
-      position: absolute;
-      content: '';
-      width: 20px;
-      height: 20px;
-      left: 0;
-      top: 3px;
-   }
-   &__item-author::before {
-      background-image: url('../images/icons/user-gray.svg');
-   }
-   &__item-date::before {
-      background-image: url('../images/icons/clock.svg');
-   }
+   // &__item-info {
+   //    display: flex;
+   //    justify-content: space-between;
+   //    margin-bottom: 10px;
+   // }
+   // &__item-author,
+   // &__item-date {
+   //    padding-left: 30px;
+   //    position: relative;
+   // }
+   // &__item-author::before,
+   // &__item-date::before {
+   //    position: absolute;
+   //    content: '';
+   //    width: 20px;
+   //    height: 20px;
+   //    left: 0;
+   //    top: 3px;
+   // }
+   // &__item-author::before {
+   //    background-image: url('../images/icons/user-gray.svg');
+   // }
+   // &__item-date::before {
+   //    background-image: url('../images/icons/clock.svg');
+   // }
    &__item-title {
       color: $title;
       font-size: 22px;
@@ -1788,12 +1788,279 @@
 
 }
 
+.blog-page {
+   padding: 120px 0 60px;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
 
+   &__content {
+      margin-right: 30px;
+      // width: 100%;
+   }
 
+   &__item {
+      max-width: 770px;
+      margin-bottom: 60px;
+   }
 
+   &__img-link {
+      display: block;
+      height: 450px;
+   }
 
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      
+      object-position: center center;
+   }
 
+   &__box {
+      padding: 40px;
+      border: 1px solid #ececec;
+      border-top: none; 
+   }
 
+   &__title {
+      @extend %roboto-500;
+      font-size: 22px;
+      line-height: 32px;
+      color: $title;
+      margin-bottom: 25px;
+      transition: color .3s;
+      &:hover {
+         color: $accent;
+      }
+   }
+
+   &__title-link {
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+   }
+
+   &__info-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-bottom: 25px;
+   }
+   .blog-page__info-box {
+      justify-content: start;
+      column-gap: 30px;
+   }
+   &__info-author,
+   &__info-date {
+      padding-left: 30px;
+      position: relative;
+      &::before {
+         position: absolute;
+         content: '';
+         width: 20px;
+         height: 20px;
+         left: 0;
+         top: 3px;
+      }
+   }
+   &__info-author::before {
+      background-image: url('../images/icons/user-gray.svg');
+   }
+   &__info-date::before {
+      background-image: url('../images/icons/clock.svg');
+   }
+
+   &__item.blog-page__item--noimage {
+      box-shadow: 0px 20px 60px rgba(202, 202, 202, 0.35);
+      .blog-page__box {
+         border: none;
+      }
+   }
+   &__slider {
+      position: relative;
+      .slick-arrow {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 40px;
+         height: 40px;
+         outline: transparent;
+         border-radius: 50%;
+         background-color: $accent;
+         border: none;
+         cursor: pointer;
+         z-index: 5;
+         box-shadow: (0px 7px 20px rgba(254, 62, 87, 0.3));
+         path {
+            fill: #fff;
+         }
+      }
+      .slick-arrow.slick-disabled {
+         background-color: #fff;
+         box-shadow: (0px 7px 20px rgba(168, 168, 168, 0.3));
+         path {
+            fill: $accent;
+         }
+      }
+      .slick-prev {
+         left: 40px;
+      }
+      .slick-next {
+         right: 40px;
+      }
+   }
+   &__item--slider {
+      .blog-page__box {
+         margin-top: -8px;
+      }
+   }
+   &__item--video {
+      .blog-page__img-link {
+         position: relative;
+         &::after {
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 80px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 50%;
+            background-image: url('../images/icons/play-solid.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+         }
+      }
+   }
+   &__aside {
+      width: 370px;
+   }
+}
+
+.blog-person {
+   margin-bottom: 40px;
+   padding: 40px 30px;
+   text-align: center;
+   border: 1px solid #ececec;
+   &__img-box {
+      display: block;
+      width: 160px;
+      margin: 0 auto 37px;
+   }
+
+   &__img {
+      height: 160px;
+      width: 100%;
+      object-fit: cover
+   }
+
+   &__name {
+      @extend %roboto-700;
+      font-size: 18px;
+      line-height: 26px;
+      color: $title;
+      margin-bottom: 5px;
+      a {
+         color: inherit;
+         font-size: inherit;
+         font-family: inherit;
+      }
+   }
+
+   &__occup {
+      color: $accent;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      margin-bottom: 10px;
+   }
+   
+   &__social-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 10px;
+   }
+
+   &__social-item {
+      path {
+         transition: fill .3s;
+         fill: $default;
+      }
+      &:hover {
+         path {
+            fill: $accent;
+         }
+      }
+   }
+}
+
+.latest-post {
+   padding: 35px 28px;
+   border: 1px solid #ececec;
+   margin-bottom: 40px;
+   &__title {
+      text-transform: uppercase;
+      @extend %roboto-400;
+      font-size: 22px;
+      line-height: 26px;
+      color: $title;
+      margin-bottom: 30px;
+   }
+
+   &__items {
+   }
+
+   &__item {
+      display: flex;
+      padding-bottom: 20px;
+
+   }
+   &__item + .latest-post__item {
+      padding-top: 17px;
+      border-top: 1px solid #ececec;
+   }
+
+   &__img-box {
+      min-width: 80px;
+      margin-right: 20px;
+   }
+
+   &__img {
+      height: 80px;
+      object-fit: cover;
+   }
+
+   &__content-title {
+      @extend %roboto-400;
+      margin-bottom: 5px;
+      color: $title;
+      font-size: 18px;
+      a {
+         color: inherit;
+         font-family: inherit;
+         font-size: inherit;
+      }
+   }
+
+   &__date {
+      padding-left: 26px;
+      position: relative;
+   }
+
+   &__date::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icons/calendar.svg');
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 5px;
+   }
+}
 
 
 
