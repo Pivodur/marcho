@@ -1,0 +1,54 @@
+.modal {
+   padding-top: 115px;
+   max-width: 570px;
+   margin: 0 auto 120px;
+   &__links {
+      text-align: center;
+      margin-bottom: 50px;
+   }
+   &__link {
+      margin: 0 30px;
+      text-transform: uppercase;
+      color: #909090;
+      @extend %roboto-400;
+      font-size: 22px;
+      line-height: 26px;
+   }
+   &__link--active {
+      color: $accent;
+   }
+   &__label {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 36px;
+   }
+   &__input {
+      margin-top: 10px;
+      width: 100%;
+      background-color: $bg;
+      border: none;
+      height: 60px;
+      padding: 15px 5px;
+   }
+   &__btn {
+      display: block;
+      width: 100%;
+      border: none;
+      background-color: $title;
+      padding: 20px 5px;
+      color: #fff;
+      cursor: pointer;
+      letter-spacing: 0.2em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+   }
+   &__error {
+      display: inline-block;
+      color: $accent;
+      @extend %roboto-400;
+   }
+   &__text {
+      margin-bottom: 20px;
+   }
+}

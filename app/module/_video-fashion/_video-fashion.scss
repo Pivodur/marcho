@@ -1,0 +1,42 @@
+.video-fashion {
+   background-image: url('../images/decor/pattern.svg');
+   background-position: top center;
+   padding: 120px 0;
+   &__inner {
+      display: flex;
+      // justify-content: center;
+   }
+   &__popup {
+      margin-right: 65px;
+      height: 480px;
+      max-width: 535px;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   &__content {
+      max-width: 570px;
+   }
+   &__subtitle {
+      padding-top: 75px;
+      margin-bottom: 7px;
+      color: $accent;
+      font-size: 22px;
+      text-transform: uppercase;
+   }
+   &__title {
+      text-align: left;
+   }
+   &__text {
+      margin-bottom: 60px;
+   }
+   &__link {
+      display: inline-block;
+      @extend %btn;
+      padding: 12px 30px;
+   }
+}
